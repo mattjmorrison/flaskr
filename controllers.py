@@ -1,6 +1,7 @@
 from db import get_db
 from app import app
 from flask import render_template, session, request, flash, redirect, url_for
+from flask import abort
 
 
 def show_entries():
