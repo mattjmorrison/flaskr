@@ -9,6 +9,7 @@ app.route('/add', methods=['POST'])(add_entry)
 app.route('/login', methods=['GET', 'POST'])(login)
 app.route('/logout')(logout)
 
+
 if __name__ == '__main__':
     app.teardown_appcontext(close_db_connection)
     init_db(app)

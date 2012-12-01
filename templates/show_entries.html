@@ -6,7 +6,8 @@
         <dt>Title:</dt>
         <dd><input type="text" size="30" name="title"></dd>
         <dt>Text:</dt>
-        <dd><textarea name="text" rows="5" cols="40"></textarea></dd>
+        <dd><textarea name="text" rows="5" cols="40" id="message"></textarea></dd>
+	<dd><div id="remaining-chars" /></dd>
         <dd><input type="submit" value="Share"></dd>
       </dl>
     </form>
@@ -23,4 +24,11 @@
     </li>
   {% endfor %}
   </ul>
+{% endblock %}
+{% block endbody %}
+<script type="text/javascript">
+$(document).ready(function(){
+    new CharLimit($('#message'));
+});
+</script>
 {% endblock %}

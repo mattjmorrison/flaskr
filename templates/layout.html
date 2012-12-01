@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Flaskr</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
   <div class="page">
@@ -19,5 +19,8 @@
     {% endfor %}
     {% block body %}{% endblock %}
   </div>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/charlimit.js') }}"></script>
+  {% block endbody %}{% endblock %}
 </body>
 </html>
